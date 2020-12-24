@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A82DC3852561ED1400C82403 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A82DC3842561ED1400C82403 /* main.cpp */; };
+		A82DC38D2561ED8700C82403 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = A82DC38C2561ED8700C82403 /* glad.c */; };
+		A82DC3A22561F28800C82403 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A82DC3A12561F28700C82403 /* libglfw.3.3.dylib */; };
+		A82DC3A32561F28800C82403 /* libglfw.3.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A82DC3A12561F28700C82403 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +23,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		A82DC3A42561F28800C82403 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A82DC3A32561F28800C82403 /* libglfw.3.3.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A82DC3812561ED1400C82403 /* BareHands */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BareHands; sourceTree = BUILT_PRODUCTS_DIR; };
+		A82DC3812561ED1400C82403 /* Valley */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Valley; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82DC3842561ED1400C82403 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A82DC38C2561ED8700C82403 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
+		A82DC39E2561F19100C82403 /* glad */ = {isa = PBXFileReference; lastKnownFileType = folder; name = glad; path = ../../../../usr/local/include/glad; sourceTree = "<group>"; };
+		A82DC39F2561F21D00C82403 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = ../../../../usr/local/include; sourceTree = "<group>"; };
+		A82DC3A02561F26300C82403 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = ../../../../usr/local/Cellar/glfw/3.3.2/lib; sourceTree = "<group>"; };
+		A82DC3A12561F28700C82403 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82DC3A22561F28800C82403 /* libglfw.3.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,45 +61,59 @@
 		A82DC3782561ED1400C82403 = {
 			isa = PBXGroup;
 			children = (
-				A82DC3832561ED1400C82403 /* BareHands */,
+				A82DC3832561ED1400C82403 /* Valley */,
 				A82DC3822561ED1400C82403 /* Products */,
+				A82DC39D2561F19100C82403 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		A82DC3822561ED1400C82403 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A82DC3812561ED1400C82403 /* BareHands */,
+				A82DC3812561ED1400C82403 /* Valley */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A82DC3832561ED1400C82403 /* BareHands */ = {
+		A82DC3832561ED1400C82403 /* Valley */ = {
 			isa = PBXGroup;
 			children = (
+				A82DC38C2561ED8700C82403 /* glad.c */,
 				A82DC3842561ED1400C82403 /* main.cpp */,
 			);
-			path = BareHands;
+			path = Valley;
+			sourceTree = "<group>";
+		};
+		A82DC39D2561F19100C82403 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A82DC3A12561F28700C82403 /* libglfw.3.3.dylib */,
+				A82DC3A02561F26300C82403 /* lib */,
+				A82DC39F2561F21D00C82403 /* include */,
+				A82DC39E2561F19100C82403 /* glad */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A82DC3802561ED1400C82403 /* BareHands */ = {
+		A82DC3802561ED1400C82403 /* Valley */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A82DC3882561ED1400C82403 /* Build configuration list for PBXNativeTarget "BareHands" */;
+			buildConfigurationList = A82DC3882561ED1400C82403 /* Build configuration list for PBXNativeTarget "Valley" */;
 			buildPhases = (
 				A82DC37D2561ED1400C82403 /* Sources */,
 				A82DC37E2561ED1400C82403 /* Frameworks */,
 				A82DC37F2561ED1400C82403 /* CopyFiles */,
+				A82DC3A42561F28800C82403 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BareHands;
+			name = Valley;
 			productName = BareHands;
-			productReference = A82DC3812561ED1400C82403 /* BareHands */;
+			productReference = A82DC3812561ED1400C82403 /* Valley */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A82DC37C2561ED1400C82403 /* Build configuration list for PBXProject "BareHands" */;
+			buildConfigurationList = A82DC37C2561ED1400C82403 /* Build configuration list for PBXProject "Valley" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A82DC3802561ED1400C82403 /* BareHands */,
+				A82DC3802561ED1400C82403 /* Valley */,
 			);
 		};
 /* End PBXProject section */
@@ -119,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A82DC3852561ED1400C82403 /* main.cpp in Sources */,
+				A82DC38D2561ED8700C82403 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +275,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +288,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -255,7 +300,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A82DC37C2561ED1400C82403 /* Build configuration list for PBXProject "BareHands" */ = {
+		A82DC37C2561ED1400C82403 /* Build configuration list for PBXProject "Valley" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A82DC3862561ED1400C82403 /* Debug */,
@@ -264,7 +309,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A82DC3882561ED1400C82403 /* Build configuration list for PBXNativeTarget "BareHands" */ = {
+		A82DC3882561ED1400C82403 /* Build configuration list for PBXNativeTarget "Valley" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A82DC3892561ED1400C82403 /* Debug */,
